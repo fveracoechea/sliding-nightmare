@@ -10,6 +10,7 @@ carousel slider, developed 100% with vanilla javascript without external depende
 <section>
   <div class="sliding-nightmare" id="sliding-nightmare">
     <div class="nightmare-inner">
+      <!-- Following this structure you can insert any number of "nightmare-item" elements -->
       <div class="nightmare-item">
         <img src="./img/image1.png" alt="image1">
       </div>
