@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sliding Nightmare</title>
+  <link rel="stylesheet" href="./assets/css/withoutImages.css">
+</head>
+<body>
+  <header>
+    <h1>Rendering elements with different design</h1>
+  </header>
+  <section>
+    <div class="sliding-nightmare" id="sliding-nightmare">
+      <div class="nightmare-inner">
+        <div class="nightmare-item">
+          <div class="content-example">
+            <div class="red padding">
+              <h2>Sliding Nightmare</h2>
+            </div>
+            <div class="green padding">
+              <h3>Sliding Nightmare</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="nightmare-item">
+          <div class="content-example">
+            <div class="violet padding">
+                <div class="blue padding">
+                    <h3>Sliding Nightmare</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+                    </p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="nightmare-item">
+          <div class="content-example column">
+            <div class="orange padding">
+                <h3>Sliding Nightmare</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+                </p>
+            </div>
+            <div class="dark padding">
+                <h3>Sliding Nightmare</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="nightmare-item">
+            <div class="content-example">
+              <div class="grid-container">
+                <div class="grid grid-1"></div>
+                <div class="grid grid-2"></div>
+                <div class="grid grid-3"></div>
+                <div class="grid grid-4"></div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="nightmare-controls" role="button">
+        <a href="#" class="nightmare-button-prev">
+          <span class="nightmare-icon-prev"></span>
+        </a>
+      </div>
+      <div class="nightmare-controls" role="button">
+        <a href="#" class="nightmare-button-next">
+          <span class="nightmare-icon-next"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <script src="../lib/app.js"></script>
+  <script>
+    new SlidingNightmare('sliding-nightmare');
+  </script>
+</body>
+</html>

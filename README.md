@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
     cover: false, // default true
     numOfVisibleElements: 4, // default 1
     animationDuration: 400, // default 600 ms
-    iamgePaddingVertical: '20px', // default 0px
+    imagesPaddingVertical: '20px', // default 0px
   });
 });
 ```

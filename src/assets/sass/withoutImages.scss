@@ -1,0 +1,78 @@
+.content-example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4b4b4b;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .red {
+    display: flex;
+    background-color: #e74c3c;
+    width: 40%;
+    height: 80%;
+  }
+  .green {
+    background-color: #28b463;
+    width: 40%;
+    height: 80%;
+  }
+
+  .blue {
+    background-color: #2980b9;
+    width: 90%;
+    height: 90%;
+  }
+  .violet {
+    display: flex;
+    background-color: #8e44ad;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+  }
+
+  .dark {
+    background-color: #2e4053;
+    width: 90%;
+    height: 40%;
+  }
+  .orange {   
+    background-color: #d35400;
+    width: 90%;
+    height: 40%;
+  }
+
+  .padding {
+    padding: 1em;
+  }
+  .grid-container {
+      width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .grid {
+    width: 50%;
+    height: 50%;
+  }
+  .grid-1 {
+    background-color: #e67e22;
+    }
+  .grid-2 {
+    background-color: #2980b9;
+    }
+  .grid-3 {
+    background-color: #e74c3c;
+    }
+  .grid-4 {
+    background-color:#138d75;
+    }
+
+}
+
+.column {
+  flex-direction: column;
+}

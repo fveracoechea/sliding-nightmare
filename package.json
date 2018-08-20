@@ -1,6 +1,6 @@
 {
   "name": "sliding-nightmare",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "carousel slider, developed 100% with vanilla javascript without external dependencies. It also uses the virtualization of elements which allows having a large number of elements without affecting the performance.",
   "main": "./lib/app.js",
   "directories": {

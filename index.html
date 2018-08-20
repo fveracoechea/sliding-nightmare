@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sliding Nightmare</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="./src/assets/css/withoutImages.css">
+</head>
+<body>
+	<header>
+			<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+					<a class="navbar-brand" href="#header">Sliding Nightmare</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+					</button>
+					<div id="navbarNavDropdown" class="navbar-collapse collapse">
+							<ul class="navbar-nav mr-auto">
+							</ul>
+							<ul class="navbar-nav">
+									<li class="nav-item active">
+											<a class="nav-link" href="#Images-without-options">Basic Usage<span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="#using-the-options">Using Options</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" href="#rendering-html-elements">Rendering HTMl Elements</a>
+									</li>
+							</ul>
+					</div>
+			</nav>
+
+		<div class="jumbotron jumbotron-fluid p-5" id="header">
+			<h1 class="display-5">sliding-nightmare</h1>
+			<p class="lead">carousel slider, developed 100% with vanilla javascript without external dependencies. It also uses the virtualization of elements which allows having a large number of elements without affecting the performance.</p>
+			<code>$ npm i sliding-nightmare --save</code>
+		</div>
+	</header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Examples</h2>
+					<hr>
+
+					<section id="Images-without-options">
+						<div class="card mb-4 bg-light">
+							<div class="card-body">
+								<h4>Basic usage</h4>
+								<code>new SlidingNightmare('example-carousel-id');</code>
+								<hr>
+								<div class="sliding-nightmare" id="example-carousel-id">
+									<div class="nightmare-inner">
+										<div class="nightmare-item">
+											<img src="./src/assets/img/soccer1.png" alt="image1">
+										</div>
+										<div class="nightmare-item">
+											<img src="./src/assets/img/soccer2.png" alt="image2">
+										</div>
+										<div class="nightmare-item">
+											<img src="./src/assets/img/soccer3.jpg" alt="image3">
+										</div>
+									</div>
+									<div class="nightmare-controls" role="button">
+										<a href="#" class="nightmare-button-prev">
+											<span class="nightmare-icon-prev"></span>
+										</a>
+									</div>
+									<div class="nightmare-controls" role="button">
+										<a href="#" class="nightmare-button-next">
+											<span class="nightmare-icon-next"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="using-the-options">
+						<div class="card mb-4 bg-light">
+							<div class="card-body">
+								<h4>Using options</h4>
+								<p>It is recommended to use <a href="https://developer.mozilla.org/es/docs/Web/API/Window/matchMedia">window.matchMedia</a> to determine the number of elements visible according to the width of the device. In this example the images on small screens are distorted.</p>
+								<code>
+									window.addEventListener('load', () => {
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;new SlidingNightmare('options-example-carousel-id', {
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;carouselStyles: {
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height: '120px',
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								},
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+											cover: true,
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+											numOfVisibleElements: 4,
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+											animationDuration: 600,
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+											imagesPaddingVertical: '20px',
+								</code> <br>
+								<code>
+								&nbsp;&nbsp;
+										});
+								</code> <br>
+								<code>
+									});
+								</code>
+								<hr>
+								<div class="sliding-nightmare" id="options-example-carousel-id">
+									<div class="nightmare-inner">
+										<div class="nightmare-item">
+											<img src="./src/assets/img/image1.png" alt="image1">
+										</div>
+										<div class="nightmare-item">
+											<img src="./src/assets/img/image2.png" alt="image2">
+										</div>
+										<div class="nightmare-item">
+											<img src="./src/assets/img/image3.png" alt="image3">
+										</div>
+										<div class="nightmare-item">
+											<img src="./src/assets/img/image4.png" alt="image4">
+										</div>
+									</div>
+									<div class="nightmare-controls" role="button">
+										<a href="#" class="nightmare-button-prev">
+											<span class="nightmare-icon-prev"></span>
+										</a>
+									</div>
+									<div class="nightmare-controls" role="button">
+										<a href="#" class="nightmare-button-next">
+											<span class="nightmare-icon-next"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section id="rendering-html-elements">
+						<div class="card mb-4 bg-light">
+								<div class="card-body">
+									<h4>Rendering HTMl Elements</h4>
+									<p>Not only can you use images within the "nightmare-items" you can also implement any type of arrangement of elements, you just have to be careful with the styles that you use.</p>
+									<xmp style="color: #e83e8c;">
+<div class="nightmare-item">
+	<div class="content-example">
+		<div class="red">
+			<ul class="list-group">
+				<li class="list-group-item">Lorem ipsum</li>
+				<li class="list-group-item">Dolor sit amet</li>
+				<li class="list-group-item">Consectetur adipisicing elit</li>
+			</ul>
+		</div>
+		<div class="green">
+			<h3>Sliding Nightmare</h3>
+			<p>
+				Lorem ipsum dolor...
+			</p>
+		</div>
+	</div>
+</div>
+									</xmp>
+									<hr>
+								<div class="sliding-nightmare" id="carousel-with-html-elements">
+										<div class="nightmare-inner">
+											<div class="nightmare-item">
+												<div class="content-example">
+													<div class="red p-4">
+														<ul class="list-group">
+															<li class="list-group-item">Lorem ipsum</li>
+															<li class="list-group-item">Dolor sit amet</li>
+															<li class="list-group-item">Consectetur adipisicing elit</li>
+														</ul>
+													</div>
+													<div class="green padding">
+														<h3>Sliding Nightmare</h3>
+														<p>
+															Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+														</p>
+													</div>
+												</div>
+											</div>
+											<div class="nightmare-item">
+												<div class="content-example">
+													<div class="violet padding">
+															<div class="blue padding">
+																	<h3>Sliding Nightmare</h3>
+																	<p>
+																		Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+																	</p>
+															</div>
+													</div>
+												</div>
+											</div>
+											<div class="nightmare-item">
+												<div class="content-example column">
+													<div class="orange padding">
+															<h3>Sliding Nightmare</h3>
+															<p>
+																Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+															</p>
+													</div>
+													<div class="dark padding">
+															<h3>Sliding Nightmare</h3>
+															<p>
+																Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+															</p>
+													</div>
+												</div>
+											</div>
+											<div class="nightmare-item">
+													<div class="content-example">
+														<div class="grid-container">
+															<div class="grid p-4 grid-1">
+																	<p>
+																			Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+																		</p>
+															</div>
+															<div class="grid p-4 grid-2">
+																	<p>
+																			Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+																		</p>
+															</div>
+															<div class="grid p-4 grid-3">
+																	<p>
+																			Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+																		</p>
+															</div>
+															<div class="grid p-4 grid-4">
+																	<p>
+																			Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis soluta nostrum esse exercitationem quasi deleniti officia iste vero qui? Earum voluptatum quisquam omnis mollitia aut modi nemo sequi a! Ipsa.
+																		</p>
+															</div>
+														</div>
+													</div>
+											</div>
+										</div>
+										<div class="nightmare-controls" role="button">
+											<a href="#" class="nightmare-button-prev">
+												<span class="nightmare-icon-prev"></span>
+											</a>
+										</div>
+										<div class="nightmare-controls" role="button">
+											<a href="#" class="nightmare-button-next">
+												<span class="nightmare-icon-next"></span>
+											</a>
+										</div>
+									</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+<script src="./lib/app.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script>
+		new SlidingNightmare('example-carousel-id');
+		new SlidingNightmare('carousel-with-html-elements');
+		new SlidingNightmare('options-example-carousel-id', {
+			carouselStyles: {
+				height: '120px', 
+			},
+			cover: true,
+			numOfVisibleElements: 4,
+			animationDuration: 600,
+			imagesPaddingVertical: '20px',
+		});
+</script>
+</body>
+</html>
